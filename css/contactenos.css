@@ -140,7 +140,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     padding: 40px;
     background: white;
     border-radius: 15px;
@@ -188,27 +188,169 @@ footer {
         font-size: 16px;
     }
 }
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+.cliente-empleado {
+    background: url('/img/backgound.jpg') no-repeat center center;
+    background-color: #003366;
+    background-size: cover;
+    padding: 40px 0;
 }
 
-body {
+/* Contenedor de los cuadros */
+.contenedorce {
     display: flex;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: blanchedalmond;
+    align-items: stretch; /* Asegura la misma altura en ambos cuadros */
+    width: 100%;
 }
 
-.wrapper {
-    margin: 150px auto;
-    width: 70px;
-    float: left;
+
+/* Efecto hover */
+.cliente:hover, .empleado:hover {
+    transform: scale(1.05);
 }
-img {
-    max-width: 320px;
-    float: right;
+
+/* Contenedor de texto */
+.textoce {
+    flex-grow: 1;
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    text-align: left;
+    padding-right: 15px;
+    position: left;
+    z-index: 1; /* Para que el texto esté sobre la imagen */ /* Fondo semitransparente */
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
 }
+
+.textoce p {
+    text-align: left;
+    max-width: 70%;
+}
+/* Imagen */
+.imagen-container img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 150px; /* Mantiene la proporción */
+    border-radius: 5px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contenedorce {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .cliente, .empleado {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .textoce {
+        padding-right: 0;
+    }
+    .imagen-container {
+        padding-left: 0;
+    }
+}
+
+h3 {
+    font-style: italic;
+    border: 2px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Contenedor de los cuadros */
+.cliente, .empleado {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    justify-content: space-between; /* Distribuye el contenido de manera uniforme */
+    align-items: center;
+    background: url('/img/fondo\ blanco.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #ccc;
+    width: 50%;
+    min-height: 300px; /* Asegura la misma altura en ambos cuadros */
+    position: relative;
+}
+
+/* Filtro oscuro para mejorar la legibilidad */
+.cliente::before, .empleado::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.096); /* Oscurece la imagen */
+    border-radius: 10px;
+}
+
+
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffffff; /* Color amarillo que resalta */
+    color: #333; /* Texto oscuro para mejor contraste */
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+
+    margin-top: auto;
+}
+ /* Estilo del Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+        position: relative;
+    }
+
+    .cerrar {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .boton {
+        display: inline-block;
+        padding: 8px 15px;
+        background: black;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+    }

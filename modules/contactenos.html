@@ -30,22 +30,82 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
                 Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. 
                 Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
             </p>
         </div>
-
+        
     </div>
+    <section class="cliente-empleado">
+        <div class="contenedorce">
+            <a href="#" class="cliente" onclick="abrirModal(event)">
+                <div class="textoce">
+                    <h3>SE NUESTRO CLIENTE</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus...
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus...
+                        Nulla convallis egestas rhoncus...
+                    </p>
+                    <button class="boton">HAZ CLICK AQUI</button>
+                </div>
+            </a>
+    
+            <a href="https://wa.me/3183888099" class="empleado">
+                <div class="textoce">
+                    <h3>TRABAJA CON NOSOTROS</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus...
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus...
+                        Nulla convallis egestas rhoncus...
+                    </p>
+                    <button class="boton" onclick="abrirEnNuevaPestana(event)">HAZ CLICK AQUI</button>
+                    <br>
+                    <script>
+                        function abrirEnNuevaPestana(event) {
+                            event.preventDefault(); // Evita cualquier comportamiento inesperado
+                            window.open('https://wa.me/3183888099', '_blank', 'noopener,noreferrer');
+                        }
+                    </script>
+                    </div>
+            </a>
+            <form class="form-register"
+            action="https://formspree.io/f/xoveeavz"
+            method="POST"
+          >
+            <h4>formulario</h4>
+            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+            <textarea class="controls" name="message" placeholder="Asunto"></textarea>
+            <input class="botons" type="submit" value="ENVIAR">
+        </form>
+
+                
+        </div>
+    </section>
+    
+    </section>
+
+    <!-- JavaScript -->
+<script>
+    function abrirModal(event) {
+        event.preventDefault(); // Evita que el enlace navegue
+        document.getElementById("modalCliente").style.display = "flex";
+    }
+
+    function cerrarModal() {
+        document.getElementById("modalCliente").style.display = "none";
+    }
+
+    function abrirEnNuevaPestana(event) {
+        event.preventDefault();
+        window.open('https://wa.me/3183888099', '_blank', 'noopener,noreferrer');
+    }
+</script>
     
   </div>
-  <div class="wrapper">
-    <img src="/img/LogoTNC.png" alt="">
-    <div class="text-box">
-        <h2>Lorem</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci blanditiis porro officia corporis reiciendis expedita magni tempora assumenda, 
-          aspernatur facere a ratione tempore. Excepturi earum consequuntur inventore ad aliquam. Temporibus!
-          
-        </p>
-    </div>
-</div>
 
         <section>
             <a href="https://wa.me/3183888099" class="whatsapp" target="_blank">

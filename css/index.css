@@ -146,9 +146,9 @@ footer {
     left: 50%;
     width: 2px;
     height: 100%;
-    background: #6658ea
+    background: #003366
 }
-.content{ border: #6658ea 1px solid; padding: 20px; border-radius: 20px; color: royalblue;}
+.content{ border: #003366 1px solid; padding: 20px; border-radius: 20px; color: #003366;}
 .timeline ul{ margin: 0; padding: 0}
 .timeline ul li{ 
     list-style: none;
@@ -171,7 +171,7 @@ footer {
     width: 20px;
     height: 20px;
     background: white;
-    border: 2px solid #6658ea;
+    border: 2px solid #003366;
     border-radius: 50%
 }
 .timeline ul li:nth-child(odd)::after{
@@ -183,7 +183,7 @@ footer {
     top: 44px;
     right: 25px;
     border-width: 10px 0 10px 15px;
-    border-color: transparent transparent transparent #6658ea;
+    border-color: transparent transparent transparent #003366;
 }
 
 .timeline ul li:nth-child(even){
@@ -201,7 +201,7 @@ footer {
     width: 20px;
     height: 20px;
     background: white;
-    border: 2px solid #6658ea;
+    border: 2px solid #003366;
     border-radius: 50%
 }
 .timeline ul li:nth-child(even)::after{
@@ -213,7 +213,7 @@ footer {
     top: 44px;
     left: 25px;
     border-width: 10px 15px 10px 0px;
-    border-color: transparent #6658ea transparent transparent;
+    border-color: transparent #003366 transparent transparent;
 }
 @media all and (max-width: 768px) {
     .timeline:before{
@@ -232,7 +232,7 @@ footer {
     .timeline ul li:nth-child(odd)::after{
         left: 25px;
         border-width: 10px 15px 10px 0px;
-        border-color: transparent #6658ea transparent transparent;
+        border-color: transparent #003366 transparent transparent;
     }
     
 }
