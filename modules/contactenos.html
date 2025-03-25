@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNC Logística S.A</title>
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+      emailjs.init('cYDAkHb4R9clkPzhW')
+    </script>
+    <link rel="stylesheet" href="../css/contactenos.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/img/LogoTNC.png" alt="TNC LOGÍSTICA S.A">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contactenos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+      <div class="contenido">
+        <div class="imagen">
+            <img src="../img/Whatsapp.png" alt="Imagen representativa">
+        </div>
+        <div class="texto">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
+                Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. 
+                Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+                Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.
+            </p>
+        </div>
+        
+    </div>
+    <section class="cliente-empleado">
+        <div class="contenedorce">
+            <a href="#" class="cliente" onclick="abrirModal(event)">
+                <div class="textoce">
+                    <h3>SE NUESTRO CLIENTE</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus...
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus...
+                        Nulla convallis egestas rhoncus...
+                    </p>
+                    <button class="boton">HAZ CLICK AQUI</button>
+                </div>
+            </a>
+    
+            <a href="https://wa.me/3183888099" class="empleado">
+                <div class="textoce">
+                    <h3>TRABAJA CON NOSOTROS</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus...
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus...
+                        Nulla convallis egestas rhoncus...
+                    </p>
+                    <button class="boton" onclick="abrirEnNuevaPestana(event)">HAZ CLICK AQUI</button>
+                    <br>
+                    <script>
+                        function abrirEnNuevaPestana(event) {
+                            event.preventDefault(); // Evita cualquier comportamiento inesperado
+                            window.open('https://wa.me/3183888099', '_blank', 'noopener,noreferrer');
+                        }
+                    </script>
+                    </div>
+            </a>
+             <!-- MODAL -->
+             <div id="modalCliente" class="modal">
+                <div class="modal-content">
+                    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                    <h2>Formulario de Contacto</h2>
+                    <form id="form">
+                        <div class="field">
+                            <label for="title">Empresa de la que nos contactas:</label>
+                            <input type="text" name="title" id="title" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="name">Nombre:</label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+                        <div class="field">
+                            <label for="message">Mensaje:</label>
+                            <input type="text" name="message" id="message" required>
+                        </div>
+                        <input type="submit" id="button" value="Enviar">
+                    </form>
+                    <script src="/app.js"></script>
+                </div>
+            </div>
+
+        
+            <script>
+                function abrirModal(event) {
+                    event.preventDefault(); // Evita que el enlace navegue
+                    document.getElementById("modalCliente").style.display = "flex";
+                }
+        
+                function cerrarModal() {
+                    document.getElementById("modalCliente").style.display = "none";
+                }
+        
+                // Cerrar modal si se hace clic fuera del contenido
+                window.onclick = function(event) {
+                    var modal = document.getElementById("modalCliente");
+                    if (event.target === modal) {
+                        modal.style.display = "none";
+                    }
+                };
+            </script>
+                
+        </div>
+    </section>
+    
+    </section>
+
+    <!-- JavaScript -->
+<script>
+
+    function abrirEnNuevaPestana(event) {
+        event.preventDefault();
+        window.open('https://wa.me/3183888099', '_blank', 'noopener,noreferrer');
+    }
+</script>
+    
+  </div>
+
+        <section>
+            <a href="https://wa.me/3183888099" class="whatsapp" target="_blank">
+                <img src="../img/Whatsapp.png" alt="WhatsApp">
+            </a>
+        </section>
+        
+          
+    </body>
+    <footer>
+        <p>&copy; 2025 TNC Logística S.A. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
+<form id="form">
+    <div class="field">
+      <label for="name">name</label>
+      <input type="text" name="name" id="name">
+    </div>
+    <div class="field">
+      <label for="message">message</label>
+      <input type="text" name="message" id="message">
+    </div>
+    <div class="field">
+      <label for="email">email</label>
+      <input type="text" name="email" id="email">
+    </div>
+    <div class="field">
+      <label for="title">title</label>
+      <input type="text" name="title" id="title">
+    </div>
+  
+    <input type="submit" id="button" value="Send Email" >
+  </form>
+  <script src="../app.js"></script>

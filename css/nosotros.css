@@ -1,0 +1,250 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #333;
+}
+header {
+    background-color: #003366;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    box-sizing: border-box;  /* Evita que el padding aumente el tamaño */
+    overflow: hidden;        /* Previene que los elementos internos lo desborden */
+}
+
+body {
+    margin: 0;        /* Elimina márgenes que puedan afectar el diseño */
+    padding-top: 80px; /* Evita que el contenido quede oculto debajo del menú */
+}
+
+nav {
+    display: flex;
+    gap: 20px;  /* Espacio entre los elementos del menú */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+.logo img {
+    width: 100%;
+    height: 50px;
+    border-radius: 7px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.intro img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.intro img:hover {
+    transform: scale(1.1);
+}
+
+.presentacion {
+    text-align: center;
+    padding: 40px;
+    background-color: #f8f9fa;
+    color: white;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.mision-vision {
+    background-color: #e0e0e0; /* Fondo gris claro */
+    padding: 30px;
+    border-radius: 10px;
+    margin: 40px auto;
+    width: 80%;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.mision, .vision {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 48%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mision:hover, .vision:hover {
+    transform: scale(1.05);
+}
+
+h3 {
+    font-style: italic;
+    border: 2px solid black;
+    padding: 5px;
+    text-align: center;
+}
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;  /* Se mantiene por encima de todo */
+}
+
+.whatsapp img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;  /* Indica que es clickeable */
+}
+
+.whatsapp img:hover {
+    transform: scale(1.2);
+}
+
+.sedes-mapa {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Hace que ambos contenedores tengan la misma altura */
+    padding: 40px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.sedes, .mapa {
+    flex: 1; /* Ambos ocupan el mismo ancho */
+    max-width: 600px; /* Limita el tamaño para que no crezca demasiado en pantallas grandes */
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinea el contenido verticalmente */
+    transition: transform 0.3s ease-in-out;
+}
+
+.sedes:hover {
+    transform: scale(1.02);
+}
+
+.sedes h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #081420;
+}
+
+.sedes ul {
+    list-style-type: none;
+    padding: 0;
+    flex-grow: 1; /* Permite que la lista ocupe todo el espacio disponible */
+}
+
+.sedes li {
+    font-size: 18px;
+    padding: 8px;
+    border-bottom: 1px solid #000000;
+    transition: color 0.3s ease-in-out;
+}
+
+.sedes li:hover {
+    color: #1a0d8a;
+    cursor: pointer;
+}
+
+.mapa {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%; /* Ocupa toda la altura del contenedor */
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .sedes-mapa {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sedes, .mapa {
+        width: 90%;
+        max-width: none;
+    }
+
+    .mapa iframe {
+        height: 400px; /* Altura fija en móviles */
+    }
+}

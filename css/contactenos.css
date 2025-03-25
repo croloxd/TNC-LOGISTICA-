@@ -1,0 +1,448 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #333;
+}
+header {
+    background-color: #003366;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    box-sizing: border-box;  /* Evita que el padding aumente el tamaño */
+    overflow: hidden;        /* Previene que los elementos internos lo desborden */
+}
+
+body {
+    margin: 0;        /* Elimina márgenes que puedan afectar el diseño */
+    padding-top: 80px; /* Evita que el contenido quede oculto debajo del menú */
+}
+
+nav {
+    display: flex;
+    gap: 20px;  /* Espacio entre los elementos del menú */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+.logo img {
+    width: 100%;
+    height: 50px;
+    border-radius: 7px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.intro img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.intro img:hover {
+    transform: scale(1.1);
+}
+
+.presentacion {
+    text-align: center;
+    padding: 40px;
+    background-color: #f8f9fa;
+    color: white;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;  /* Se mantiene por encima de todo */
+}
+
+.whatsapp img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;  /* Indica que es clickeable */
+}
+
+.whatsapp img:hover {
+    transform: scale(1.2);
+}
+
+.contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagen {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ddd;
+    border: 3px solid black;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto {
+    flex: 1;
+    font-size: 18px;
+    color: #333;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagen {
+        width: 120px;
+        height: 120px;
+    }
+
+    .texto {
+        font-size: 16px;
+    }
+}
+.cliente-empleado {
+    background: url('/img/backgound.jpg') no-repeat center center;
+    background-color: #003366;
+    background-size: cover;
+    padding: 40px 0;
+}
+
+/* Contenedor de los cuadros */
+.contenedorce {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch; /* Asegura la misma altura en ambos cuadros */
+    width: 100%;
+}
+
+
+/* Efecto hover */
+.cliente:hover, .empleado:hover {
+    transform: scale(1.05);
+}
+
+/* Contenedor de texto */
+.textoce {
+    flex-grow: 1;
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    text-align: left;
+    padding-right: 15px;
+    position: left;
+    z-index: 1; /* Para que el texto esté sobre la imagen */ /* Fondo semitransparente */
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.textoce p {
+    text-align: left;
+    max-width: 70%;
+}
+/* Imagen */
+.imagen-container img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 150px; /* Mantiene la proporción */
+    border-radius: 5px;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contenedorce {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .cliente, .empleado {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .textoce {
+        padding-right: 0;
+    }
+    .imagen-container {
+        padding-left: 0;
+    }
+}
+
+h3 {
+    font-style: italic;
+    border: 2px solid black;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Contenedor de los cuadros */
+.cliente, .empleado {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    justify-content: space-between; /* Distribuye el contenido de manera uniforme */
+    align-items: center;
+    background: url('/img/fondo\ blanco.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid #ccc;
+    width: 50%;
+    min-height: 300px; /* Asegura la misma altura en ambos cuadros */
+    position: relative;
+}
+
+/* Filtro oscuro para mejorar la legibilidad */
+.cliente::before, .empleado::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.096); /* Oscurece la imagen */
+    border-radius: 10px;
+}
+
+
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffffff; /* Color amarillo que resalta */
+    color: #333; /* Texto oscuro para mejor contraste */
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+
+    margin-top: auto;
+}
+ /* Estilo del Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+        position: relative;
+    }
+
+    .cerrar {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .boton {
+        display: inline-block;
+        padding: 8px 15px;
+        background: black;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .field {
+        margin-bottom: 10px;
+      }
+      
+      .field label {
+        display: block;
+        font-size: 12px;
+        color: #777;
+      }
+      
+      .field input {
+        display: block;
+        min-width: 250px;
+        line-height: 1.5;
+        font-size: 14px;
+      }
+      
+      input[type="submit"] {
+        display: block;
+        padding: 6px 30px;
+        font-size: 14px;
+        background-color: #4460AA;
+        color: #fff;
+        border: none
+      }
+      /* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón para cerrar */
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Estilos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: royalblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: darkblue;
+}
+/* 🎨 Modal de alerta personalizado */
+/* 🎨 Modal de alerta personalizado */
+
