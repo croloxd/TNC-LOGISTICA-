@@ -1,4 +1,5 @@
 const btn = document.getElementById('button');
+const modal = document.getElementById('modalCliente'); // Asegúrate de que el modal tenga este ID
 
 document.getElementById('form').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita que la página se recargue
@@ -12,6 +13,7 @@ document.getElementById('form').addEventListener('submit', function(event) {
         .then(() => {
             btn.value = 'Enviar';
             this.reset(); // 🔹 Limpia todos los campos del formulario
+            modal.style.display = 'none'; // 🔹 Cierra el modal
         }, (err) => {
             btn.value = 'Enviar';
             console.error("Error:", err); // Muestra errores en la consola

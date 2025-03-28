@@ -1,3 +1,8 @@
+html, body {
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    width: 100%; /* Asegura que no crezca más allá del viewport */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -140,8 +145,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 40px;
+    gap: 100px;
+    padding: 35px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -149,8 +154,8 @@ footer {
 }
 
 .imagen {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -375,7 +380,7 @@ h3 {
         display: block;
         padding: 6px 30px;
         font-size: 14px;
-        background-color: #4460AA;
+        background-color: #003366;
         color: #fff;
         border: none
       }
@@ -433,7 +438,7 @@ input {
 }
 
 input[type="submit"] {
-    background-color: royalblue;
+    background-color: #003366;
     color: white;
     border: none;
     cursor: pointer;
@@ -443,6 +448,86 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: darkblue;
 }
-/* 🎨 Modal de alerta personalizado */
-/* 🎨 Modal de alerta personalizado */
+footer {
+    background-color: #003366; /* Color oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
 
+.footer-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.social-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-section hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.brand-section h2 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+}
+
+.brand-section p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.legal-section a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.legal-section a:hover {
+    text-decoration: underline;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    
+}
+body h2 {
+    font-weight: 6000; /* Hace los títulos más llamativos */
+    font-size: 2.2em;
+}
+
+.footer-container h2 {
+    font-weight: 600; /* Hace los títulos más llamativos */
+    font-size: 1.2em;
+}
+.footer-container p, 
+.footer-container a {
+    font-weight: 300; /* Hace los textos más ligeros */
+    font-size: 1em;
+}
+.footer-container {
+    font-family: 'Poppins', sans-serif;
+    color: white; /* Mantén el contraste con el fondo */
+}

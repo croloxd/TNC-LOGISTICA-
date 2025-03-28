@@ -1,3 +1,9 @@
+html, body {
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    width: 100%; /* Asegura que no crezca más allá del viewport */
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -73,7 +79,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 50px;
+    padding: 6px;
     background-color: #f8f9fa;
     border-radius: 10px;
     margin: 20px;
@@ -98,10 +104,9 @@ nav a:hover {
     color: white;
 }
 
-.video-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.container {
+    text-align: center;
+    padding: 15px;
 }
 
 iframe {
@@ -111,7 +116,7 @@ iframe {
 footer {
     background-color: #003366;
     color: white;
-    text-align: center;
+    text-align: left;
     padding: 20px;
     margin-top: 40px;
     position: relative;
@@ -146,9 +151,12 @@ footer {
     left: 50%;
     width: 2px;
     height: 100%;
-    background: #003366
+    background: #000000
 }
-.content{ border: #003366 1px solid; padding: 20px; border-radius: 20px; color: #003366;}
+.contentp{ border: #fbff00 3px solid; padding: 10px; border-radius: 20px; color: #000000;}
+.contents{ border: #003366 3px solid; padding: 10px; border-radius: 20px; color: #000000;}
+.contentt{ border: #7000ff 3px solid; padding: 10px; border-radius: 20px; color: #000000;}
+.contentc{ border: #66ff00e0 3px solid; padding: 10px; border-radius: 20px; color: #000000;}
 .timeline ul{ margin: 0; padding: 0}
 .timeline ul li{ 
     list-style: none;
@@ -156,8 +164,11 @@ footer {
     width: 50%;
     padding: 20px 40px;
     box-sizing: border-box;
-}
 
+}
+.content h2 {
+    color: #003366;
+}
 .timeline ul li:nth-child(odd){
     float: left;
     text-align: right;
@@ -183,7 +194,7 @@ footer {
     top: 44px;
     right: 25px;
     border-width: 10px 0 10px 15px;
-    border-color: transparent transparent transparent #003366;
+    border-color: transparent transparent transparent #ffffff;
 }
 
 .timeline ul li:nth-child(even){
@@ -213,7 +224,7 @@ footer {
     top: 44px;
     left: 25px;
     border-width: 10px 15px 10px 0px;
-    border-color: transparent #003366 transparent transparent;
+    border-color: transparent #ffffff transparent transparent;
 }
 @media all and (max-width: 768px) {
     .timeline:before{
@@ -235,4 +246,87 @@ footer {
         border-color: transparent #003366 transparent transparent;
     }
     
+}
+footer {
+    background-color: #003366; /* Color oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.social-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-section hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.brand-section h2 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+}
+
+.brand-section p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.legal-section a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.legal-section a:hover {
+    text-decoration: underline;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    
+}
+body h2 {
+    font-weight: 6000; /* Hace los títulos más llamativos */
+    font-size: 2.2em;
+}
+
+.footer-container h2 {
+    font-weight: 600; /* Hace los títulos más llamativos */
+    font-size: 1.2em;
+}
+.footer-container p, 
+.footer-container a {
+    font-weight: 300; /* Hace los textos más ligeros */
+    font-size: 1em;
+}
+.footer-container {
+    font-family: 'Poppins', sans-serif;
+    color: white; /* Mantén el contraste con el fondo */
 }
